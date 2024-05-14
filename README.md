@@ -2,7 +2,7 @@
 BELLABEAT CASE STUDY 
 (using excel, sql and tableau)
 
-INTRODUCTION
+INTRODUCTION gftgd
 
 
 
