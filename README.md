@@ -115,8 +115,7 @@ The datasets I used:
 
 ### 4.ANALYZE: ###
 - checking for distinct values.
-
-   ```
+```
 
    select
        'dailyactivity_Ids',count(distinct(Id))
@@ -139,10 +138,56 @@ The datasets I used:
        `sandbox-first-project-1.bellabeat.weightlog` 
    
    ````
+Query result: (no.of unique users according to id's)
+``` 
+   dailyactivity_Ids    33
+   sleepday_Ids   	24
+   heartrate_Ids	14 
+   weightlog_Ids         8
 
+```
+- Summarizing overall data
+  ```
+      select 
+       count(distinct(Id)) as Ids,
+       avg(cast(TotalDistance as float64)) as average_of_total_distance,
+       round(avg(cast(calories as int64))) as calories,
+       round(avg(cast(LightlyActiveMinutes as int64))) as average_of_lightly_active_minutes,
+       round(avg(cast(FairlyActiveMinutes as int64))) as average_fairly_active_minutes,
+       round(avg(cast(VeryActiveMinutes as int64))) as average_of_very_active_minutes,
+       round(avg(cast(TotalSteps as int64))) as daily_average_steps,
+       max(cast(TotalSteps as int64))as maximum_daily_steps,
+       min(cast(TotalSteps as int64))as minimum_daily_steps
+   from
+      `sandbox-first-project-1.bellabeat.daily_activity`;
+   select
+       (avg(cast(totalminutesasleep as float64))/60) as average_daily_sleep,
+       (max(cast(totalminutesasleep as float64))/60) as maximum_daily_sleep,
+       (min(cast(totalminutesasleep as float64))/60) as minimum_daily_sleep
+   from
+    `sandbox-first-project-1.bellabeat.sleep_day`
+
+  ```
+  Query result:
+  ```
+  
+  Ids: 33
+  average_of_total_distance: 5.489702121915415
+  calories: 2304.0
+  average_of_lightly_active_minutes: 193.0
+  average_fairly_active_minutes: 14.0
+  average_of_very_active_minutes: 21.0
+  daily_average_steps: 7638.0
+  maximum_daily_steps: 36019
+  minimum_daily_steps: 0
+
+  ```
   
   
 
 
+
+  
+  
 
 
