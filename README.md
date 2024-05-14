@@ -1,4 +1,8 @@
 # Google-Data-Analytics-Capstone-project
-Bellabeat project
+BELLABEAT CASE STUDY 
+(using excel, sql and tableau)
+
+INTRODUCTION
+
 
 
