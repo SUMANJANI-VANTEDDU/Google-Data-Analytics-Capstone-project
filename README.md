@@ -80,7 +80,7 @@ Used public dataset from kaggle
 - limited number of users data.
 
 ### 3. PROCESS: ###
-18 datasets in the fitbit public data:
+18 datasets in the fitbit fitness tracker public data:
 1. dailyActivity_merged.csv
 2. dailyCalories_merged.csv
 3. dailyIntensities_merged.csv
