@@ -69,7 +69,79 @@ we use data analysis process to analyze the casestudy and provide our recommenda
 
 ### 2. PREPARE: ###
 Used public dataset from kaggle  
-[ kaggle datasets download -d arashnic/fitbit ]
+[ https://www.kaggle.com/datasets/arashnic/fitbit ] 
+- This dataset consists of personal data related to 30 fitbit users.
+- The dataset I used covers the timeperiod from 4/12/2016 to 5/12/2016.
+- There are 18 datasets related to this timeperiod.
+- stored as "sandbox-first-project.bellabeat"
+#### Limitations: ####
+- repeated data.
+- some of the data is incomplete.
+- limited number of users data.
+
+### 3. PROCESS: ###
+18 datasets in the fitbit public data:
+1. dailyActivity_merged.csv
+2. dailyCalories_merged.csv
+3. dailyIntensities_merged.csv
+4. dailySteps_merged.csv
+5. heartrate_seconds_merged.csv
+6. hourlyCalories_merged.csv
+7. hourlyIntensities_merged.csv
+8. hourlySteps_merged.csv
+9. minuteCaloriesNarrow_merged.csv
+10. minuteCaloriesWide_merged.csv
+11. minuteIntensitiesNarrow_merged.csv
+12. minuteIntensitiesWide_merged.csv
+13. minuteMETsNarrow_merged.csv
+14. minuteSleep_merged.csv
+15. minuteStepsNarrow_merged.csv
+16. minuteStepsWide_merged.csv
+17. sleepDay_merged.csv
+18. weightLogInfo_merged
+
+The datasets I used:
+-    dailyActivity_merged
+-    sleepDay_merged
+-    weightLogInfo
+-    minuteSleep_merged
+-    heartrate_seconds_merged
+-    minuteMETsNarrow_merged
+
+#### Tools used: ####
+- 'Google sheets' for merging, sorting and filtering data.
+- 'BigQuery' for querying data in SQL.
+- 'Tableau' for data visualization.
+
+### 4.ANALYZE: ###
+- checking for distinct values.
+
+   ```
+
+   select
+       'dailyactivity_Ids',count(distinct(Id))
+   from
+       `sandbox-first-project-1.bellabeat.daily_activity`
+   union all
+   select
+       'heartrate_Ids',count(distinct(Id))
+   from
+       `sandbox-first-project-1.bellabeat.heartrate_seconds`
+   union all
+   select
+        'sleepday_Ids', count(distinct(Id))
+   from 
+        `sandbox-first-project-1.bellabeat.sleep_day`
+   union all
+   select
+       'weightlog_Ids',count(distinct(Id))
+   from
+       `sandbox-first-project-1.bellabeat.weightlog` 
+   
+   ````
+
+  
+  
 
 
 
