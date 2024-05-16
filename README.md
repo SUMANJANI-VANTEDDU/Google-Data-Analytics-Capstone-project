@@ -182,10 +182,7 @@ Query result: (no.of unique users according to id's)
   minimum_daily_steps: 0
 
   ```
-  
-  
-
-
+  ![Sheet 1 (2) (1)](https://github.com/SUMANJANI-VANTEDDU/Google-Data-Analytics-Capstone-project/assets/169730878/f6615320-06c8-4d07-bfd2-7400e411ed37)
 
   
   
